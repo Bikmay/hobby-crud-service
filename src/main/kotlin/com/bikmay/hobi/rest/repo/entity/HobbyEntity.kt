@@ -1,6 +1,14 @@
 package com.bikmay.hobi.rest.repo.entity
 
-import javax.persistence.Table
+import lombok.AllArgsConstructor
+import lombok.NoArgsConstructor
+import javax.persistence.*
 
-@Table("hobbys")
-data class HobbyEntity(val id:String?,val text:String)
+@Table(name = "hobbys")
+@Entity
+data class HobbyEntity(
+    val name:String = "name"){
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    val id:Long = 0;
+}
