@@ -9,4 +9,5 @@ import org.springframework.stereotype.Service
 @Service
 class HobbyService(private val repo: HobbyRepository) {
     fun getAll(page: Pageable): Page<HobbyEntity> = repo.findAll(page);
+    fun getCount():Long = repo.count();
 }
