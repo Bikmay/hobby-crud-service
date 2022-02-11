@@ -10,4 +10,6 @@ import org.springframework.stereotype.Service
 class HobbyService(private val repo: HobbyRepository) {
     fun getAll(page: Pageable): Page<HobbyEntity> = repo.findAll(page);
     fun getCount():Long = repo.count();
+    //todo fix cast
+    fun getImgUrlById(id:Long):String = repo.findById(id).get().imgUrl;
 }
