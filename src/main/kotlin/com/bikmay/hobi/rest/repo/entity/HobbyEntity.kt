@@ -9,5 +9,8 @@ data class HobbyEntity(
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     val id:Long = 0;
+
+    val description:String="";
+
     val imgUrl:String="";
 }
